@@ -12,6 +12,7 @@ class Driver:
         return {'Время': start_time, 'status': 'Ожидаю вызова', 'Водитель': self.name, 'авто': self.car}
 
 
+dr = Driver()
+
 if __name__ == '__main__':
-    dr = Driver()
     print(dr.start_job())
