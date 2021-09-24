@@ -1,9 +1,9 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import Property
 
 
-class Container(Widget):
+class Container(BoxLayout):
     pass
 
 
