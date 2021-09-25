@@ -8,6 +8,7 @@
     adress_call: adress_call
     start_job: start_job
     drive_for_client: drive_for_client
+    waiting_client: waiting_client
 
     Label:
         id: adress_call
@@ -29,7 +30,10 @@
             root.drive_for_client_method()
 
     Button:
+        id: waiting_client
         text: 'Ожидаю пассажира'
+        on_release:
+            root.waiting_client_method()
 
     Button:
         text: 'Везу пассажира'

@@ -6,6 +6,7 @@ class Driver:
     def __init__(self, name='Александр Рыбчинский', car='Renault'):
         self.name = name
         self.car = car
+        self.start_timer = 0
 
     def run(self):
         pass
@@ -23,6 +24,14 @@ class Driver:
         """
         start_time = time.asctime().split()[-2]
         return {'Время': start_time, 'статус': 'Еду за пассажиром', 'Водитель': self.name, 'авто': self.car}
+
+    def waiting_client(self):
+        """
+        Ожидание пассажира
+        """
+        self.start_timer = time.time()
+        start_time = time.asctime().split()[-2]
+        return {'Время': start_time, 'статус': 'Жду пассажира', 'Водитель': self.name, 'авто': self.car}
 
 
 if __name__ == '__main__':

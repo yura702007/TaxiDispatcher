@@ -7,7 +7,8 @@ from driver import Driver
 class Container(BoxLayout):
     adress_call = ObjectProperty()
     start_job = ObjectProperty()
-    drive_for_client = ObjectProperty
+    drive_for_client = ObjectProperty()
+    waiting_client = ObjectProperty()
 
     dr = Driver()
 
@@ -22,6 +23,12 @@ class Container(BoxLayout):
         Еду за пассажиром
         """
         self.adress_call.text = str(self.dr.drive_for_client())
+
+    def waiting_client_method(self):
+        """
+        Ожидание пассажира
+        """
+        self.adress_call.text = str(self.dr.waiting_client())
 
 
 class FaceApp(App):
