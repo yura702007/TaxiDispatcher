@@ -10,6 +10,7 @@
     drive_for_client: drive_for_client
     waiting_client: waiting_client
     order_execution: order_execution
+    end_job: end_job
 
     Label:
         id: adress_call
@@ -43,4 +44,9 @@
             root.order_execution_method()
 
     Button:
+        id: end_job
         text: 'Конец работы'
+        on_press:
+            root.end_job_method()
+        on_release:
+            app.stop()

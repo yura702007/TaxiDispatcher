@@ -11,6 +11,7 @@ class Container(BoxLayout):
     drive_for_client = ObjectProperty()
     waiting_client = ObjectProperty()
     order_execution = ObjectProperty()
+    end_job = ObjectProperty()
 
     dr = Driver()
 
@@ -37,6 +38,10 @@ class Container(BoxLayout):
         Везу пассажира
         """
         self.adress_call.text = str(self.dr.order_execution())
+
+    def end_job_method(self):
+        with open('file.txt', 'w', encoding='utf8') as file:
+            file.write(str(self.dr.end_job()))
 
 
 class FaceApp(App):

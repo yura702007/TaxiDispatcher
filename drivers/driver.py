@@ -46,6 +46,13 @@ class Driver:
             'Водитель': self.name, 'авто': self.car
         }
 
+    def end_job(self):
+        """
+        Конец работы
+        """
+        end_time = time.asctime().split()[-2]
+        return {'Время': end_time, 'статус': 'Отдых', 'Водитель': self.name, 'авто': self.car}
+
 
 if __name__ == '__main__':
     dr = Driver()
