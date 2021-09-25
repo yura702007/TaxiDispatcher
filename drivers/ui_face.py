@@ -1,11 +1,17 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import Property
-from driver import dr
+from kivy.properties import ObjectProperty
+from driver import Driver
 
 
 class Container(BoxLayout):
-    pass
+    adress_call = ObjectProperty()
+    start_job = ObjectProperty()
+
+    dr = Driver()
+
+    def start_job_method(self):
+        self.adress_call.text = str(self.dr.start_job())
 
 
 class FaceApp(App):

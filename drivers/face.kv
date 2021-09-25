@@ -5,14 +5,21 @@
     spacing: 10
     orientation: 'vertical'
 
+    adress_call: adress_call
+    start_job: start_job
+
     Label:
+        id: adress_call
         text: 'Адрес вызова'
 
     Label:
         text: 'Адрес назначения'
 
     Button:
+        id: start_job
         text: 'Ожидаю вызова'
+        on_release:
+            root.start_job_method()
 
     Button:
         text: 'Еду за пассажиром'
