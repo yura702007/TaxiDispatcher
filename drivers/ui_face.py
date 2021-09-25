@@ -5,10 +5,12 @@ from driver import Driver
 
 
 class Container(BoxLayout):
+
     adress_call = ObjectProperty()
     start_job = ObjectProperty()
     drive_for_client = ObjectProperty()
     waiting_client = ObjectProperty()
+    order_execution = ObjectProperty()
 
     dr = Driver()
 
@@ -29,6 +31,12 @@ class Container(BoxLayout):
         Ожидание пассажира
         """
         self.adress_call.text = str(self.dr.waiting_client())
+
+    def order_execution_method(self):
+        """
+        Везу пассажира
+        """
+        self.adress_call.text = str(self.dr.order_execution())
 
 
 class FaceApp(App):

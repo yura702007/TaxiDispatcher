@@ -33,6 +33,19 @@ class Driver:
         start_time = time.asctime().split()[-2]
         return {'Время': start_time, 'статус': 'Жду пассажира', 'Водитель': self.name, 'авто': self.car}
 
+    def order_execution(self):
+        """
+        Везу пассажира
+        """
+        stop_timer = time.time()
+        timer = round((stop_timer - self.start_timer) / 60)
+        self.start_timer = 0
+        start_time = time.asctime().split()[-2]
+        return {
+            'Время': start_time, 'Время ожидания': timer, 'статус': 'Везу пассажира',
+            'Водитель': self.name, 'авто': self.car
+        }
+
 
 if __name__ == '__main__':
     dr = Driver()

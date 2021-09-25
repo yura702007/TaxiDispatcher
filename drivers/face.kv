@@ -9,6 +9,7 @@
     start_job: start_job
     drive_for_client: drive_for_client
     waiting_client: waiting_client
+    order_execution: order_execution
 
     Label:
         id: adress_call
@@ -36,7 +37,10 @@
             root.waiting_client_method()
 
     Button:
+        id: order_execution
         text: 'Везу пассажира'
+        on_release:
+            root.order_execution_method()
 
     Button:
         text: 'Конец работы'
