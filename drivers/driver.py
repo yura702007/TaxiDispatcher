@@ -11,11 +11,21 @@ class Driver:
         pass
 
     def start_job(self):
+        """
+        Ожидаю вызова
+        """
         start_time = time.asctime().split()[-2]
         return {'Время': start_time, 'статус': 'Ожидаю вызова', 'Водитель': self.name, 'авто': self.car}
+
+    def drive_for_client(self):
+        """
+        Еду за пассажиром
+        """
+        start_time = time.asctime().split()[-2]
+        return {'Время': start_time, 'статус': 'Еду за пассажиром', 'Водитель': self.name, 'авто': self.car}
 
 
 if __name__ == '__main__':
     dr = Driver()
-    print(dr.start_job())
-    print(dr.start_job.__name__, type(dr.start_job.__name__))
+    print(dr.drive_for_client())
+    print(dr.start_job.__doc__, type(dr.start_job.__name__))
